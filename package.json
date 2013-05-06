@@ -1,0 +1,27 @@
+{
+  "name": "mappoint",
+  "description": "When you simply need to map a stream",
+  "version": "0.2.0",
+  "author": "Andreas Madsen <amwebdk@gmail.com>",
+  "scripts": {
+    "test": "tap test.js"
+  },
+  "main": "./map.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/AndreasMadsen/mappoint.git"
+  },
+  "keywords": [
+    "map",
+    "stream",
+    "point"
+  ],
+  "devDependencies": {
+    "tap": "0.4.x"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": "0.10",
+    "npm": "1"
+  }
+}
