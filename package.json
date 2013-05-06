@@ -6,7 +6,7 @@
   "scripts": {
     "test": "tap test.js"
   },
-  "main": "./map.js",
+  "main": "./mappoint.js",
   "repository": {
     "type": "git",
     "url": "git://github.com/AndreasMadsen/mappoint.git"
