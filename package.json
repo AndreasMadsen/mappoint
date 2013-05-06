@@ -1,7 +1,7 @@
 {
   "name": "mappoint",
   "description": "When you simply need to map a stream",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "author": "Andreas Madsen <amwebdk@gmail.com>",
   "scripts": {
     "test": "tap test.js"
