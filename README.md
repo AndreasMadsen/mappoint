@@ -32,6 +32,17 @@ stream.end({bool: true});
 stream.once('readable', function () {
   stream.read(); // {bool: false}
 });
+
+// error example
+var stream = mappoint(function (object, done) {
+  done(new Error('failure'));
+});
+
+stream.once('error', function (err) {
+  // err = new Error('failure');
+});
+
+stream.end('fail');
 ```
 
 ##License
