@@ -21,16 +21,20 @@ module.exports = Mappoint;
 
 Mappoint.prototype._transform = function (data, encoding, done) {
   var self = this;
-  
+
   this._map(data, function (err, object) {
     if (err) return done(err);
 
-    self.push(object);
+    if (object !== null && object !== undefined) {
+      console.log(object);
+      self.push(object);
+    }
     done(null);
   });
 };
 
 Mappoint.prototype._flush = function (done) {
+  console.log('flush');
   this.push(null);
   done(null);
 };

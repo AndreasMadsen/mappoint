@@ -38,3 +38,43 @@ test('error emit', function (t) {
 
   stream.end({});
 });
+
+test('null push', function (t) {
+  var finished = 0;
+
+  var stream = mappoint({objectMode: true}, function (object, done) {
+    setTimeout(function () {
+      finished += 1;
+      done(null);
+    }, 200);
+  });
+
+  stream.resume();
+  stream.once('end', function () {
+    t.equal(finished, 2);
+    t.end();
+  });
+
+  stream.write({});
+  stream.end({});
+});
+
+test('undefined push', function (t) {
+  var finished = 0;
+
+  var stream = mappoint({objectMode: true}, function (object, done) {
+    setTimeout(function () {
+      finished += 1;
+      done(null);
+    }, 200);
+  });
+
+  stream.resume();
+  stream.once('end', function () {
+    t.equal(finished, 2);
+    t.end();
+  });
+
+  stream.write({});
+  stream.end({});
+});
