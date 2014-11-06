@@ -26,7 +26,6 @@ Mappoint.prototype._transform = function (data, encoding, done) {
     if (err) return done(err);
 
     if (object !== null && object !== undefined) {
-      console.log(object);
       self.push(object);
     }
     done(null);
@@ -34,7 +33,6 @@ Mappoint.prototype._transform = function (data, encoding, done) {
 };
 
 Mappoint.prototype._flush = function (done) {
-  console.log('flush');
   this.push(null);
   done(null);
 };
